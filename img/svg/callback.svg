@@ -1,0 +1,8 @@
+export default {
+      id: "callback-usage",
+      viewBox: "0 0 44 44",
+      url: __webpack_public_path__ + "D:\\frontend\\Projects\\kurortika-makeup\\src\\img\\svg\\callback.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

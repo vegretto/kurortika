@@ -1,0 +1,8 @@
+export default {
+      id: "testimonials-usage",
+      viewBox: "0 0 13 13",
+      url: __webpack_public_path__ + "D:\\frontend\\Projects\\kurortika-makeup\\src\\img\\svg\\testimonials.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

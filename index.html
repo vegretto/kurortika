@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Курортика</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+  <link href="styles/main.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <div class="header__inner"><a class="header__logo" href="/">
+          <picture>
+            <source data-srcset="img/logo.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 162 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;162&quot; height=&quot;50&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/logo.png" alt="image" width="162" height="50">
+          </picture></a>
+        <nav class="header__nav"><a class="header__navlink" href="#offers">Поиск выгодных предложений</a><a class="header__navlink" href="#work">Как мы работаем</a><a class="header__navlink" href="#offers">Горящие предложения</a><a class="header__navlink" href="#testimonials">Отзывы</a><a class="header__navlink" href="#team">Наши эксперты</a></nav>
+        <div class="header__contacts">
+          <div class="header__phone-wrapper">
+            <svg class="icon icon-phone">
+              <use xlink:href="sprite.svg#phone"></use>
+            </svg><a class="header__phone" href="tel:88002001050">8 800 200-10-50</a>
+          </div>
+          <div class="header__contacts-text">Бесплатный звонок по всей России</div>
+        </div>
+        <div class="mobile-menu-toggle js-open-mob-menu">
+          <svg class="icon icon-mob-menu">
+            <use xlink:href="sprite.svg#mob-menu"></use>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <section class="main-block">
+        <div class="container">
+          <h1 class="main-block__title">Организуем ваш отдых за <span>1 день бесплатно</span></h1>
+          <div class="main-block__subtitle">На курортах Кавказских минеральных вод</div>
+          <div class="choose-sanatorium">
+            <div class="choose-sanatorium__inner">
+              <div class="choose-sanatorium__top">
+                <div class="choose-sanatorium__tabs">
+                  <div class="choose-sanatorium__tab js-choose-sanatorium-tab active">
+                    <div class="choose-sanatorium__tab-inner">
+                      <div class="choose-sanatorium__tab-icon">
+                        <svg class="icon icon-choose-sans">
+                          <use xlink:href="sprite.svg#choose-sans"></use>
+                        </svg>
+                      </div>
+                      <div class="choose-sanatorium__tab-text">Санатории</div>
+                    </div>
+                  </div>
+                  <!--.choose-sanatorium__tab.js-choose-sanatorium-tab-->
+                  <!--  .choose-sanatorium__tab-inner-->
+                  <!--    .choose-sanatorium__tab-icon-->
+                  <!--      +icon('choose-hotels')-->
+                  <!--    .choose-sanatorium__tab-text Гостиницы-->
+                  <!--.choose-sanatorium__tab.js-choose-sanatorium-tab-->
+                  <!--  .choose-sanatorium__tab-inner-->
+                  <!--    .choose-sanatorium__tab-icon-->
+                  <!--      +icon('choose-tours')-->
+                  <!--    .choose-sanatorium__tab-text Экскурсии-->
+                </div>
+                <div class="choose-sanatorium__advanced">
+                  <div class="choose-sanatorium__advanced-icon">
+                    <svg class="icon icon-advanced">
+                      <use xlink:href="sprite.svg#advanced"></use>
+                    </svg>
+                  </div>
+                  <div class="choose-sanatorium__advanced-text">Расширенные настройки</div>
+                </div>
+              </div>
+              <div class="choose-sanatorium__middle">
+                <form class="choose-sanatorium__form" id="choose-sanatorium-form">
+                  <div class="choose-sanatorium__top-panel">
+                    <div class="form-group form-group--select form-group--region">
+                      <label class="choose-sanatorium__label" for="choose-sanatorium-region">Регион</label>
+                      <select class="select__hidden" name="choose-sanatorium-region" id="choose-sanatorium-region">
+                        <option disabled selected value>Выбрать регион</option>
+                        <option>Пятигорск</option>
+                        <option>Кисловодск</option>
+                        <option>Ессентуки</option>
+                        <option>Железноводск</option>
+                        <option>Пятигорск</option>
+                        <option>Кисловодск</option>
+                        <option>Ессентуки</option>
+                        <option>Железноводск</option>
+                      </select>
+                      <div class="select__styled">Выбрать регион</div>
+                      <div class="select__options">
+                        <div class="select__options-inner">
+                          <div class="select__options-pointer"></div>
+                          <div class="select__option">Пятигорск</div>
+                          <div class="select__option">Кисловодск</div>
+                          <div class="select__option">Ессентуки</div>
+                          <div class="select__option">Железноводск</div>
+                          <div class="select__option">Пятигорск</div>
+                          <div class="select__option">Кисловодск</div>
+                          <div class="select__option">Ессентуки</div>
+                          <div class="select__option">Железноводск</div>
+                        </div>
+                      </div>
+                      <div class="error-message">Это поле обязательно для заполнения</div>
+                    </div>
+                    <div class="form-group form-group--select form-group--profile">
+                      <label class="choose-sanatorium__label" for="choose-sanatorium-profile">Профиль лечения</label>
+                      <select class="select__hidden" name="choose-sanatorium-profile" id="choose-sanatorium-profile">
+                        <option disabled selected value>Выбрать профиль</option>
+                        <option>Сердечно-сосудистые заболевания</option>
+                        <option>Желудочно-кишечный тракт</option>
+                        <option>Урология</option>
+                        <option>Сердечно-сосудистые заболевания</option>
+                        <option>Желудочно-кишечный тракт</option>
+                        <option>Урология</option>
+                        <option>Сердечно-сосудистые заболевания</option>
+                        <option>Желудочно-кишечный тракт</option>
+                        <option>Урология</option>
+                      </select>
+                      <div class="select__styled">Сердечно-сосудистые заболевания</div>
+                      <div class="select__options">
+                        <div class="select__options-inner">
+                          <div class="select__options-pointer"></div>
+                          <div class="select__option">Сердечно-сосудистые заболевания</div>
+                          <div class="select__option">Желудочно-кишечный тракт</div>
+                          <div class="select__option">Урология</div>
+                          <div class="select__option">Сердечно-сосудистые заболевания</div>
+                          <div class="select__option">Желудочно-кишечный тракт</div>
+                          <div class="select__option">Урология</div>
+                          <div class="select__option">Сердечно-сосудистые заболевания</div>
+                          <div class="select__option">Желудочно-кишечный тракт</div>
+                          <div class="select__option">Урология</div>
+                        </div>
+                      </div>
+                      <div class="error-message">Это поле обязательно для заполнения</div>
+                    </div>
+                    <div class="form-group form-group--date form-group--date-1">
+                      <label class="choose-sanatorium__label" for="choose-sanatorium-arrival">Дата заезда</label>
+                      <div class="datepicker-wrapper">
+                        <input class="choose-sanatorium-arrival datepicker-here" type="text" name="choose-sanatorium-arrival" id="choose-sanatorium-arrival" readonly>
+                      </div>
+                      <div class="error-message">Это поле обязательно для заполнения</div>
+                    </div>
+                    <div class="form-group form-group--date form-group--date-2">
+                      <label class="choose-sanatorium__label" for="choose-sanatorium-departure">Дата выезда</label>
+                      <div class="datepicker-wrapper">
+                        <input class="choose-sanatorium-departure datepicker-here" type="text" name="choose-sanatorium-departure" id="choose-sanatorium-departure" readonly>
+                      </div>
+                      <div class="error-message">Это поле обязательно для заполнения</div>
+                    </div>
+                    <div class="form-group form-group--select form-group--guests">
+                      <label class="choose-sanatorium__label" for="choose-sanatorium-guests">Гости</label>
+                      <input class="choose-sanatorium-guests" type="text" value="Выбрать" readonly id="choose-sanatorium-guests">
+                      <div class="select__styled">Выбрать</div>
+                      <div class="select__options">
+                        <div class="select__options-inner">
+                          <div class="select__options-pointer"></div>
+                          <div class="select__item">
+                            <div class="select__item-name">Взрослые</div>
+                            <div class="select__num-wrapper">
+                              <div class="select__minus">–</div>
+                              <div class="select__number">1</div>
+                              <div class="select__plus">+</div>
+                            </div>
+                          </div>
+                          <div class="select__item">
+                            <div class="select__item-name">Дети</div>
+                            <div class="select__num-wrapper">
+                              <div class="select__minus">–</div>
+                              <div class="select__number">0</div>
+                              <div class="select__plus">+</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="error-message">Это поле обязательно для заполнения</div>
+                    </div>
+                    <button class="choose-sanatorium__submit-btn js-open-modal" type="submit" data-modal="modal-callback">Подобрать</button>
+                  </div>
+                  <div class="choose-sanatorium__additional-options">
+                    <div class="choose-sanatorium__column choose-sanatorium__column--prices">
+                      <div class="choose-sanatorium__subtitle">Уровень цен</div>
+                      <div class="choose-sanatorium__checkboxes">
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-1">Эконом</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-1">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-2">Стандарт</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-2">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-3">Премиум</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-3">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choose-sanatorium__column">
+                      <div class="choose-sanatorium__subtitle">Характеристики</div>
+                      <div class="choose-sanatorium__checkboxes">
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-4">Есть парковка</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-4">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-5">Бесплатный Wi-Fi</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-5">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-6">Тренажерный зал</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-6">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-7">Бассейн</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-7">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                      </div>
+                      <div class="choose-sanatorium__more"><span class="choose-sanatorium__plus">+</span> Показать еще</div>
+                    </div>
+                    <div class="choose-sanatorium__column">
+                      <div class="choose-sanatorium__subtitle">Характеристики</div>
+                      <div class="choose-sanatorium__checkboxes">
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-8">Есть парковка</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-8">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-9">Бесплатный Wi-Fi</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-9">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-10">Тренажерный зал</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-10">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-11">Бассейн</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-11">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                      </div>
+                      <div class="choose-sanatorium__more"><span class="choose-sanatorium__plus">+</span> Показать еще</div>
+                    </div>
+                    <div class="choose-sanatorium__column">
+                      <div class="choose-sanatorium__subtitle">Характеристики</div>
+                      <div class="choose-sanatorium__checkboxes">
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-12">Есть парковка</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-12">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-13">Бесплатный Wi-Fi</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-13">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-14">Тренажерный зал</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-14">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-15">Бассейн</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-15">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                      </div>
+                      <div class="choose-sanatorium__more"><span class="choose-sanatorium__plus">+</span> Показать еще</div>
+                    </div>
+                    <div class="choose-sanatorium__column">
+                      <div class="choose-sanatorium__subtitle">Характеристики</div>
+                      <div class="choose-sanatorium__checkboxes">
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-16">Есть парковка</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-16">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-17">Бесплатный Wi-Fi</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-17">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-18">Тренажерный зал</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-18">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                          <div class="custom-cb-badge js-custom-cb"></div>
+                          <label class="choose-sanatorium__cb-label" for="choose-sanatorium-checkbox-19">Бассейн</label>
+                          <input class="choose-sanatorium-checkbox" type="checkbox" name="choose-sanatorium-checkbox" id="choose-sanatorium-checkbox-19">
+                          <div class="error-message">Это поле обязательно для заполнения</div>
+                        </div>
+                      </div>
+                      <div class="choose-sanatorium__more"><span class="choose-sanatorium__plus">+</span> Показать еще</div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="main-block__bottom">
+            <div class="main-block__advantages">
+              <div class="main-block__advantage-item">
+                <div class="main-block__advantage-icon">
+                  <svg class="icon icon-advant1">
+                    <use xlink:href="sprite.svg#advant1"></use>
+                  </svg>
+                </div>
+                <div class="main-block__advantage-text">Найдём лучшие<br>варианты по цене среди сотен предложений</div>
+              </div>
+              <div class="main-block__advantage-item">
+                <div class="main-block__advantage-icon">
+                  <svg class="icon icon-advant2">
+                    <use xlink:href="sprite.svg#advant2"></use>
+                  </svg>
+                </div>
+                <div class="main-block__advantage-text">Проконсультируем<br>по медицинским услугам<br>санатория</div>
+              </div>
+              <div class="main-block__advantage-item">
+                <div class="main-block__advantage-icon">
+                  <svg class="icon icon-advant3">
+                    <use xlink:href="sprite.svg#advant3"></use>
+                  </svg>
+                </div>
+                <div class="main-block__advantage-text">Заполним и оформим все документы за вас, дадим подробную инструкцию</div>
+              </div>
+              <div class="main-block__advantage-item">
+                <div class="main-block__advantage-icon">
+                  <svg class="icon icon-advant4">
+                    <use xlink:href="sprite.svg#advant4"></use>
+                  </svg>
+                </div>
+                <div class="main-block__advantage-text">Бонус - бесплатный трансфер<br>при бронировании<br>от 14 дней</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="offers" id="offers">
+        <div class="container">
+          <div class="offers__inner">
+            <h2 class="common-title">Курортика - лучшие предложения для вашего отдыха</h2>
+            <div class="choose-sanatorium__tabs choose-sanatorium__tabs--purple">
+              <div class="choose-sanatorium__tab js-choose-sanatorium-tab active">
+                <div class="choose-sanatorium__tab-inner">
+                  <div class="choose-sanatorium__tab-icon">
+                    <svg class="icon icon-choose-sans">
+                      <use xlink:href="sprite.svg#choose-sans"></use>
+                    </svg>
+                  </div>
+                  <div class="choose-sanatorium__tab-text">Санатории</div>
+                </div>
+              </div>
+              <!--.choose-sanatorium__tab.js-choose-sanatorium-tab-->
+              <!--  .choose-sanatorium__tab-inner-->
+              <!--    .choose-sanatorium__tab-icon-->
+              <!--      +icon('choose-hotels')-->
+              <!--    .choose-sanatorium__tab-text Гостиницы-->
+              <!--.choose-sanatorium__tab.js-choose-sanatorium-tab-->
+              <!--  .choose-sanatorium__tab-inner-->
+              <!--    .choose-sanatorium__tab-icon-->
+              <!--      +icon('choose-tours')-->
+              <!--    .choose-sanatorium__tab-text Экскурсии-->
+            </div>
+            <div class="offers__items">
+              <div class="offers__item offers__item-sm js-open-modal" data-modal="modal-book">
+                <div class="offers__item-img">
+                  <picture>
+                    <source data-srcset="img/place1.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 285 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;285&quot; height=&quot;210&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/place1.png" alt="image" width="285" height="210">
+                  </picture>
+                </div>
+                <div class="offers__item-content">
+                  <div class="offers__item-title-wrapper">
+                    <svg class="icon icon-choose-hotels">
+                      <use xlink:href="sprite.svg#choose-hotels"></use>
+                    </svg>
+                    <div class="offers__item-title">Гостиница Русь</div>
+                  </div>
+                  <div class="offers__item-cost">3 500 ₽ за сутки в люксе</div>
+                  <div class="offers__item-discount">6500 ₽</div>
+                </div>
+                <div class="offers__hover-content">
+                  <div class="offers__top-label">
+                    <div class="offers__top-text-lg">Скидка 35%</div>
+                    <div class="offers__top-text-sm">При бронировании от 14 дней</div>
+                  </div>
+                  <div class="offers__middle">
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-testimonials">
+                        <use xlink:href="sprite.svg#testimonials"></use>
+                      </svg>
+                      <div class="offers__middle-text">Отзывы</div>
+                      <div class="offers__middle-num">0</div>
+                    </div>
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-star">
+                        <use xlink:href="sprite.svg#star"></use>
+                      </svg>
+                      <div class="offers__middle-text">Рейтинг</div>
+                      <div class="offers__middle-num">8.5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="offers__item offers__item-sm js-open-modal" data-modal="modal-book">
+                <div class="offers__item-img">
+                  <picture>
+                    <source data-srcset="img/place2.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 285 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;285&quot; height=&quot;210&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/place2.png" alt="image" width="285" height="210">
+                  </picture>
+                </div>
+                <div class="offers__item-content">
+                  <div class="offers__item-title-wrapper">
+                    <svg class="icon icon-choose-tours">
+                      <use xlink:href="sprite.svg#choose-tours"></use>
+                    </svg>
+                    <div class="offers__item-title">Экскурсия в Приэльбрусье</div>
+                  </div>
+                  <div class="offers__item-cost">1 700 ₽ за одно место</div>
+                  <div class="offers__item-discount">6500 ₽</div>
+                </div>
+                <div class="offers__hover-content">
+                  <div class="offers__top-label">
+                    <div class="offers__top-text-lg">Скидка 35%</div>
+                    <div class="offers__top-text-sm">При бронировании от 14 дней</div>
+                  </div>
+                  <div class="offers__middle">
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-testimonials">
+                        <use xlink:href="sprite.svg#testimonials"></use>
+                      </svg>
+                      <div class="offers__middle-text">Отзывы</div>
+                      <div class="offers__middle-num">0</div>
+                    </div>
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-star">
+                        <use xlink:href="sprite.svg#star"></use>
+                      </svg>
+                      <div class="offers__middle-text">Рейтинг</div>
+                      <div class="offers__middle-num">8.5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="offers__item offers__item-sm js-open-modal" data-modal="modal-book">
+                <div class="offers__item-img">
+                  <picture>
+                    <source data-srcset="img/place1.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 285 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;285&quot; height=&quot;210&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/place1.png" alt="image" width="285" height="210">
+                  </picture>
+                </div>
+                <div class="offers__item-content">
+                  <div class="offers__item-title-wrapper">
+                    <svg class="icon icon-choose-hotels">
+                      <use xlink:href="sprite.svg#choose-hotels"></use>
+                    </svg>
+                    <div class="offers__item-title">Гостиница Русь</div>
+                  </div>
+                  <div class="offers__item-cost">3 500 ₽ за сутки в люксе</div>
+                  <div class="offers__item-discount">6500 ₽</div>
+                </div>
+                <div class="offers__hover-content">
+                  <div class="offers__top-label">
+                    <div class="offers__top-text-lg">Скидка 35%</div>
+                    <div class="offers__top-text-sm">При бронировании от 14 дней</div>
+                  </div>
+                  <div class="offers__middle">
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-testimonials">
+                        <use xlink:href="sprite.svg#testimonials"></use>
+                      </svg>
+                      <div class="offers__middle-text">Отзывы</div>
+                      <div class="offers__middle-num">0</div>
+                    </div>
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-star">
+                        <use xlink:href="sprite.svg#star"></use>
+                      </svg>
+                      <div class="offers__middle-text">Рейтинг</div>
+                      <div class="offers__middle-num">8.5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="offers__item offers__item-sm js-open-modal" data-modal="modal-book">
+                <div class="offers__item-img">
+                  <picture>
+                    <source data-srcset="img/place3.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 285 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;285&quot; height=&quot;210&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/place3.png" alt="image" width="285" height="210">
+                  </picture>
+                </div>
+                <div class="offers__item-content">
+                  <div class="offers__item-title-wrapper">
+                    <svg class="icon icon-choose-sans">
+                      <use xlink:href="sprite.svg#choose-sans"></use>
+                    </svg>
+                    <div class="offers__item-title">Пансионат Мечта</div>
+                  </div>
+                  <div class="offers__item-cost">1 200 ₽ за сутки</div>
+                  <div class="offers__item-discount">6500 ₽</div>
+                </div>
+                <div class="offers__hover-content">
+                  <div class="offers__top-label">
+                    <div class="offers__top-text-lg">Скидка 35%</div>
+                    <div class="offers__top-text-sm">При бронировании от 14 дней</div>
+                  </div>
+                  <div class="offers__middle">
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-testimonials">
+                        <use xlink:href="sprite.svg#testimonials"></use>
+                      </svg>
+                      <div class="offers__middle-text">Отзывы</div>
+                      <div class="offers__middle-num">0</div>
+                    </div>
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-star">
+                        <use xlink:href="sprite.svg#star"></use>
+                      </svg>
+                      <div class="offers__middle-text">Рейтинг</div>
+                      <div class="offers__middle-num">8.5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="offers__item offers__item-lg js-open-modal" data-modal="modal-book">
+                <div class="offers__item-img">
+                  <picture>
+                    <source data-srcset="img/place1.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 437 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;437&quot; height=&quot;210&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/place1.png" alt="image" width="437" height="210">
+                  </picture>
+                </div>
+                <div class="offers__item-content">
+                  <div class="offers__item-title-wrapper">
+                    <svg class="icon icon-choose-hotels">
+                      <use xlink:href="sprite.svg#choose-hotels"></use>
+                    </svg>
+                    <div class="offers__item-title">Гостиница Русь</div>
+                  </div>
+                  <div class="offers__item-cost">3 500 ₽ за сутки в люксе</div>
+                  <div class="offers__item-discount">6500 ₽</div>
+                </div>
+                <div class="offers__hover-content">
+                  <div class="offers__top-label">
+                    <div class="offers__top-text-lg">Скидка 35%</div>
+                    <div class="offers__top-text-sm">При бронировании от 14 дней</div>
+                  </div>
+                  <div class="offers__middle">
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-testimonials">
+                        <use xlink:href="sprite.svg#testimonials"></use>
+                      </svg>
+                      <div class="offers__middle-text">Отзывы</div>
+                      <div class="offers__middle-num">0</div>
+                    </div>
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-star">
+                        <use xlink:href="sprite.svg#star"></use>
+                      </svg>
+                      <div class="offers__middle-text">Рейтинг</div>
+                      <div class="offers__middle-num">8.5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="offers__item offers__item-lg js-open-modal" data-modal="modal-book">
+                <div class="offers__item-img">
+                  <picture>
+                    <source data-srcset="img/place1.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 437 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;437&quot; height=&quot;210&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/place1.png" alt="image" width="437" height="210">
+                  </picture>
+                </div>
+                <div class="offers__item-content">
+                  <div class="offers__item-title-wrapper">
+                    <svg class="icon icon-choose-hotels">
+                      <use xlink:href="sprite.svg#choose-hotels"></use>
+                    </svg>
+                    <div class="offers__item-title">Гостиница Русь</div>
+                  </div>
+                  <div class="offers__item-cost">3 500 ₽ за сутки в люксе</div>
+                  <div class="offers__item-discount">6500 ₽</div>
+                </div>
+                <div class="offers__hover-content">
+                  <div class="offers__top-label">
+                    <div class="offers__top-text-lg">Скидка 35%</div>
+                    <div class="offers__top-text-sm">При бронировании от 14 дней</div>
+                  </div>
+                  <div class="offers__middle">
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-testimonials">
+                        <use xlink:href="sprite.svg#testimonials"></use>
+                      </svg>
+                      <div class="offers__middle-text">Отзывы</div>
+                      <div class="offers__middle-num">0</div>
+                    </div>
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-star">
+                        <use xlink:href="sprite.svg#star"></use>
+                      </svg>
+                      <div class="offers__middle-text">Рейтинг</div>
+                      <div class="offers__middle-num">8.5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="offers__item offers__item-sm js-open-modal" data-modal="modal-book">
+                <div class="offers__item-img">
+                  <picture>
+                    <source data-srcset="img/place3.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 285 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;285&quot; height=&quot;210&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/place3.png" alt="image" width="285" height="210">
+                  </picture>
+                </div>
+                <div class="offers__item-content">
+                  <div class="offers__item-title-wrapper">
+                    <svg class="icon icon-choose-sans">
+                      <use xlink:href="sprite.svg#choose-sans"></use>
+                    </svg>
+                    <div class="offers__item-title">Пансионат Мечта</div>
+                  </div>
+                  <div class="offers__item-cost">1 200 ₽ за сутки</div>
+                  <div class="offers__item-discount">6500 ₽</div>
+                </div>
+                <div class="offers__hover-content">
+                  <div class="offers__top-label">
+                    <div class="offers__top-text-lg">Скидка 35%</div>
+                    <div class="offers__top-text-sm">При бронировании от 14 дней</div>
+                  </div>
+                  <div class="offers__middle">
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-testimonials">
+                        <use xlink:href="sprite.svg#testimonials"></use>
+                      </svg>
+                      <div class="offers__middle-text">Отзывы</div>
+                      <div class="offers__middle-num">0</div>
+                    </div>
+                    <div class="offers__middle-item">
+                      <svg class="icon icon-star">
+                        <use xlink:href="sprite.svg#star"></use>
+                      </svg>
+                      <div class="offers__middle-text">Рейтинг</div>
+                      <div class="offers__middle-num">8.5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="work" id="work">
+        <div class="container">
+          <h2 class="common-title common-title--white">Как мы работаем</h2>
+          <div class="work__items">
+            <div class="work__item">
+              <div class="work__content">
+                <div class="work__title-wrapper">
+                  <div class="work__num">01</div>
+                  <div class="work__title">Заявка</div>
+                </div>
+                <div class="work__text">Рыбные тексты также применяются для демонстрации различных видов шрифта</div>
+              </div>
+              <div class="work__img"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 130 130&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;130&quot; height=&quot;130&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="svgIcons/work1.svg" alt="image" width="130" height="130">
+              </div>
+            </div>
+            <div class="work__item">
+              <div class="work__content">
+                <div class="work__title-wrapper">
+                  <div class="work__num">02</div>
+                  <div class="work__title">Подбор</div>
+                </div>
+                <div class="work__text">Рыбные тексты также применяются для демонстрации различных видов шрифта</div>
+              </div>
+              <div class="work__img"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 130 130&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;130&quot; height=&quot;130&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="svgIcons/work2.svg" alt="image" width="130" height="130">
+              </div>
+            </div>
+            <div class="work__item">
+              <div class="work__content">
+                <div class="work__title-wrapper">
+                  <div class="work__num">03</div>
+                  <div class="work__title">Оплата</div>
+                </div>
+                <div class="work__text">Рыбные тексты также применяются для демонстрации различных видов шрифта</div>
+              </div>
+              <div class="work__img"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 130 130&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;130&quot; height=&quot;130&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="svgIcons/work3.svg" alt="image" width="130" height="130">
+              </div>
+            </div>
+            <div class="work__item">
+              <div class="work__content">
+                <div class="work__title-wrapper">
+                  <div class="work__num">04</div>
+                  <div class="work__title">Документы</div>
+                </div>
+                <div class="work__text">Рыбные тексты также применяются для демонстрации различных видов шрифта</div>
+              </div>
+              <div class="work__img"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 130 130&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;130&quot; height=&quot;130&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="svgIcons/work4.svg" alt="image" width="130" height="130">
+              </div>
+            </div>
+            <div class="work__item">
+              <div class="work__content">
+                <div class="work__title-wrapper">
+                  <div class="work__num">05</div>
+                  <div class="work__title">Отдых</div>
+                </div>
+                <div class="work__text">Рыбные тексты также применяются для демонстрации различных видов шрифта</div>
+              </div>
+              <div class="work__img"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 130 130&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;130&quot; height=&quot;130&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="svgIcons/work5.svg" alt="image" width="130" height="130">
+              </div>
+            </div>
+            <div class="work__item">
+              <div class="work__content">
+                <div class="work__title-wrapper">
+                  <div class="work__num">06</div>
+                  <div class="work__title">Отзывы</div>
+                </div>
+                <div class="work__text">Рыбные тексты также применяются для демонстрации различных видов шрифта</div>
+              </div>
+              <div class="work__img"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 130 130&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;130&quot; height=&quot;130&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="svgIcons/work6.svg" alt="image" width="130" height="130">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="u-get">
+        <div class="container">
+          <h2 class="common-title">В результате вы получите</h2>
+          <div class="u-get__items">
+            <div class="u-get__item">
+              <div class="u-get__img">
+                <picture>
+                  <source data-srcset="img/u-get1.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 344 178&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;344&quot; height=&quot;178&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/u-get1.png" alt="image" width="344" height="178">
+                </picture>
+              </div>
+              <div class="u-get__title">Бесплатный подбор места отдыха</div>
+              <div class="u-get__text">Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно.</div>
+            </div>
+            <div class="u-get__item">
+              <div class="u-get__img">
+                <picture>
+                  <source data-srcset="img/u-get2.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 420 195&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;420&quot; height=&quot;195&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/u-get2.png" alt="image" width="420" height="195">
+                </picture>
+              </div>
+              <div class="u-get__title">Персональную инструкцию</div>
+              <div class="u-get__text">Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно.</div>
+            </div>
+            <div class="u-get__item">
+              <div class="u-get__img">
+                <picture>
+                  <source data-srcset="img/u-get3.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 234 202&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;234&quot; height=&quot;202&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/u-get3.png" alt="image" width="234" height="202">
+                </picture>
+              </div>
+              <div class="u-get__title">Оформленные документы</div>
+              <div class="u-get__text">Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно.</div>
+            </div>
+            <div class="u-get__item">
+              <div class="u-get__img">
+                <picture>
+                  <source data-srcset="img/u-get4.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 255 190&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;255&quot; height=&quot;190&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/u-get4.png" alt="image" width="255" height="190">
+                </picture>
+              </div>
+              <div class="u-get__title">Помощь личного менеджера на всех этапах</div>
+              <div class="u-get__text">Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team" id="team">
+        <div class="container">
+          <h2 class="common-title common-title--white">Наши эксперты</h2>
+          <div class="team__items">
+            <div class="team__item">
+              <div class="team__img">
+                <picture>
+                  <source data-srcset="img/team1.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 223 155&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;223&quot; height=&quot;155&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/team1.jpg" alt="image" width="223" height="155">
+                </picture>
+              </div>
+              <div class="team__content">
+                <div class="team__name">Елена Иванова</div>
+                <div class="team__job">Менеджер по работе с клиентами</div><a class="team__email" href="mailto:e.ivanova@kurortica.ru">e.ivanova@kurortica.ru</a>
+                <div class="team__phone-wrapper">
+                  <svg class="icon icon-team-phone">
+                    <use xlink:href="sprite.svg#team-phone"></use>
+                  </svg><a class="team__phone" href="tel:880010020050">8 800 100 200 50 <span>(доб. 3)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="team__item">
+              <div class="team__img">
+                <picture>
+                  <source data-srcset="img/team2.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 223 155&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;223&quot; height=&quot;155&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/team2.jpg" alt="image" width="223" height="155">
+                </picture>
+              </div>
+              <div class="team__content">
+                <div class="team__name">Елена Иванова</div>
+                <div class="team__job">Менеджер по работе с клиентами</div><a class="team__email" href="mailto:e.ivanova@kurortica.ru">e.ivanova@kurortica.ru</a>
+                <div class="team__phone-wrapper">
+                  <svg class="icon icon-team-phone">
+                    <use xlink:href="sprite.svg#team-phone"></use>
+                  </svg><a class="team__phone" href="tel:880010020050">8 800 100 200 50 <span>(доб. 3)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="team__item">
+              <div class="team__img">
+                <picture>
+                  <source data-srcset="img/team3.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 223 155&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;223&quot; height=&quot;155&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/team3.jpg" alt="image" width="223" height="155">
+                </picture>
+              </div>
+              <div class="team__content">
+                <div class="team__name">Елена Иванова</div>
+                <div class="team__job">Менеджер по работе с клиентами</div><a class="team__email" href="mailto:e.ivanova@kurortica.ru">e.ivanova@kurortica.ru</a>
+                <div class="team__phone-wrapper">
+                  <svg class="icon icon-team-phone">
+                    <use xlink:href="sprite.svg#team-phone"></use>
+                  </svg><a class="team__phone" href="tel:880010020050">8 800 100 200 50 <span>(доб. 3)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="team__item">
+              <div class="team__img">
+                <picture>
+                  <source data-srcset="img/team2.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 223 155&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;223&quot; height=&quot;155&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/team2.jpg" alt="image" width="223" height="155">
+                </picture>
+              </div>
+              <div class="team__content">
+                <div class="team__name">Елена Иванова</div>
+                <div class="team__job">Менеджер по работе с клиентами</div><a class="team__email" href="mailto:e.ivanova@kurortica.ru">e.ivanova@kurortica.ru</a>
+                <div class="team__phone-wrapper">
+                  <svg class="icon icon-team-phone">
+                    <use xlink:href="sprite.svg#team-phone"></use>
+                  </svg><a class="team__phone" href="tel:880010020050">8 800 100 200 50 <span>(доб. 3)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="team__item">
+              <div class="team__img">
+                <picture>
+                  <source data-srcset="img/team3.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 223 155&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;223&quot; height=&quot;155&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/team3.jpg" alt="image" width="223" height="155">
+                </picture>
+              </div>
+              <div class="team__content">
+                <div class="team__name">Елена Иванова</div>
+                <div class="team__job">Менеджер по работе с клиентами</div><a class="team__email" href="mailto:e.ivanova@kurortica.ru">e.ivanova@kurortica.ru</a>
+                <div class="team__phone-wrapper">
+                  <svg class="icon icon-team-phone">
+                    <use xlink:href="sprite.svg#team-phone"></use>
+                  </svg><a class="team__phone" href="tel:880010020050">8 800 100 200 50 <span>(доб. 3)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="articles">
+        <div class="container">
+          <div class="articles__items">
+            <div class="articles__item">
+              <h2 class="common-title">Отдых на Кавказских Минеральных Водах</h2>
+              <div class="articles__item-wrapper">
+                <div class="articles__item-imgs">
+                  <div class="articles__item-img-lg"><a href="img/articles1.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles1.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 466 300&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;466&quot; height=&quot;300&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles1.png" alt="image" width="466" height="300">
+                      </picture></a>
+                  </div>
+                  <div class="articles__item-imgs-sm"><a href="img/articles2.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles2.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 147 91&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;147&quot; height=&quot;91&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles2.png" alt="image" width="147" height="91">
+                      </picture></a><a href="img/articles3.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles3.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 147 91&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;147&quot; height=&quot;91&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles3.png" alt="image" width="147" height="91">
+                      </picture></a><a href="img/articles4.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles4.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 147 91&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;147&quot; height=&quot;91&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles4.png" alt="image" width="147" height="91">
+                      </picture></a>
+                  </div>
+                </div>
+                <div class="articles__item-text">
+                  <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                  <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                  <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                </div>
+              </div>
+            </div>
+            <div class="articles__item articles__item--inverted">
+              <h2 class="common-title">Отдых на Кавказских Минеральных Водах</h2>
+              <div class="articles__item-wrapper">
+                <div class="articles__item-imgs">
+                  <div class="articles__item-img-lg"><a href="img/articles1.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles1.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 466 300&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;466&quot; height=&quot;300&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles1.png" alt="image" width="466" height="300">
+                      </picture></a>
+                  </div>
+                  <div class="articles__item-imgs-sm"><a href="img/articles2.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles2.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 147 91&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;147&quot; height=&quot;91&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles2.png" alt="image" width="147" height="91">
+                      </picture></a><a href="img/articles3.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles3.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 147 91&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;147&quot; height=&quot;91&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles3.png" alt="image" width="147" height="91">
+                      </picture></a><a href="img/articles4.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles4.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 147 91&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;147&quot; height=&quot;91&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles4.png" alt="image" width="147" height="91">
+                      </picture></a>
+                  </div>
+                </div>
+                <div class="articles__item-text">
+                  <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                  <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                  <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                </div>
+              </div>
+            </div>
+            <div class="articles__item">
+              <h2 class="common-title">Отдых на Кавказских Минеральных Водах</h2>
+              <div class="articles__item-wrapper">
+                <div class="articles__item-imgs">
+                  <div class="articles__item-img-lg"><a href="img/articles1.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles1.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 466 300&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;466&quot; height=&quot;300&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles1.png" alt="image" width="466" height="300">
+                      </picture></a>
+                  </div>
+                  <div class="articles__item-imgs-sm"><a href="img/articles2.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles2.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 147 91&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;147&quot; height=&quot;91&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles2.png" alt="image" width="147" height="91">
+                      </picture></a><a href="img/articles3.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles3.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 147 91&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;147&quot; height=&quot;91&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles3.png" alt="image" width="147" height="91">
+                      </picture></a><a href="img/articles4.png" data-fancybox="gallery">
+                      <picture>
+                        <source data-srcset="img/articles4.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 147 91&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;147&quot; height=&quot;91&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/articles4.png" alt="image" width="147" height="91">
+                      </picture></a>
+                  </div>
+                </div>
+                <div class="articles__item-text">
+                  <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                  <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                  <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <h2 class="common-title">Отзывы о нашей работе</h2>
+          <div class="testimonials__items">
+            <div class="testimonials__item">
+              <div class="testimonials__person">
+                <div class="testimonials__person-inner">
+                  <div class="testimonials__name">Иван Иванов</div>
+                  <div class="testimonials__date">Отдых: 13.12.2019</div>
+                  <div class="testimonials__score">Оценка: <span class="js-score">2.5</span> из 5</div>
+                  <div class="testimonials__stars">
+                    <div class="stars js-stars">
+                      <div class="stars__icons">
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__text">Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</div>
+            </div>
+            <div class="testimonials__item">
+              <div class="testimonials__person">
+                <div class="testimonials__person-inner">
+                  <div class="testimonials__name">Иван Иванов</div>
+                  <div class="testimonials__date">Отдых: 13.12.2019</div>
+                  <div class="testimonials__score">Оценка: <span class="js-score">3.9</span> из 5</div>
+                  <div class="testimonials__stars">
+                    <div class="stars js-stars">
+                      <div class="stars__icons">
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__text">Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</div>
+            </div>
+            <div class="testimonials__item">
+              <div class="testimonials__person">
+                <div class="testimonials__person-inner">
+                  <div class="testimonials__name">Иван Иванов</div>
+                  <div class="testimonials__date">Отдых: 13.12.2019</div>
+                  <div class="testimonials__score">Оценка: <span class="js-score">4.5</span> из 5</div>
+                  <div class="testimonials__stars">
+                    <div class="stars js-stars">
+                      <div class="stars__icons">
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                        <div class="star"><span class="star__icon star__icon--active"></span><span class="star__icon star__icon--default"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__text">Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="misc">
+        <div class="container">
+          <div class="misc__inner">
+            <form class="callback-form">
+              <div class="callback-form__inner">
+                <div class="callback-form__top">
+                  <div class="callback-form__title">Свяжитесь с нами прямо сейчас</div>
+                  <div class="callback-form__icon">
+                    <svg class="icon icon-callback">
+                      <use xlink:href="sprite.svg#callback"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="callback-form__text">Введите номер телефона<br>и наш специалист перезвонит<br>в ближайшее время</div>
+                <div class="form-group form-group--custom form-group--phone">
+                  <label for="callback-phone">+ 7 900 000 00 00</label>
+                  <input class="custom-input js-input" type="tel" name="callback-phone" id="callback-phone">
+                  <div class="error-message">Это поле обязательно для заполнения</div>
+                </div>
+                <button class="callback-form__submit-btn btn" type="submit" id="callback-submit">Заказать обратный звонок</button><div class="form-group form-group__allow">
+<input type="checkbox" name="callback-allow" id="callback-allow" required checked>
+<label for="callback-allow">Я даю согласие на обработку моих персональных данных</label>
+</div>
+              </div>
+            </form>
+            <div class="seo">
+              <div class="common-title seo__title">Заголовок для SEO</div>
+              <div class="seo__text">
+                <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на странице (макет или площадь набора).</p>
+                <p>Поэтому большинство рыбных текстов состоят из более или менее произвольного набора слов и слогов. Таким образом образцы повторения не отвлекают от общей картины, а шрифты имеют лучшую базу сравнения. Преимущественно конечно, если рыбный текст кажется в некоторой степени реалистичным, не искажая тем самым воздействие макета финальной публикации.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__cols">
+          <div class="footer__col footer__col-1"><a class="footer__logo" href="/">
+              <picture>
+                <source data-srcset="img/logo.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 162 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;162&quot; height=&quot;50&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/logo.png" alt="image" width="162" height="50">
+              </picture></a>
+            <div class="footer__description">Туристическое агентство <br>Кавказские Минеральные Воды</div>
+          </div>
+          <div class="footer__col footer__col-2">
+            <div class="footer__phone-text--wrapper">
+              <div class="footer__phone-wrapper">
+                <svg class="icon icon-phone">
+                  <use xlink:href="sprite.svg#phone"></use>
+                </svg><a class="footer__phone" href="tel:88002001050">8 800 200-10-50</a>
+              </div>
+              <div class="footer__contacts-text">Бесплатный звонок по всей России</div>
+            </div>
+            <div class="footer__policies"><a class="footer__personal-data" href="#">Персональные данные</a><a class="footer__privacy-policy" href="#">Политика конфиденциальности</a>
+              <div class="footer__trademark">© ООО «Курортика», 2021</div>
+            </div>
+          </div>
+          <div class="footer__col footer__col-3"><a class="footer__mail" href="mailto:info@kurortica.ru">info@kurortica.ru</a>
+            <div class="footer__address">г. Ессентуки, ул. Центральная, д. 20, оф. 305</div>
+            <div class="footer__show-address">
+              <!--+icon('footer-placemark')-->
+              <!--a(href="#") показать на карте-->
+            </div>
+            <div class="footer__work-time">
+              <div class="footer__wt-title">Режим работы</div>
+              <div class="footer__wt-text">Пн-Пт: 10.00 - 18.00</div>
+              <div class="footer__wt-text">Сб-Вс: 11:00 - 15.00</div>
+            </div>
+          </div>
+          <div class="footer__col footer__col-4">
+            <nav class="footer__nav"><a class="footer__navlink" href="#work">Поиск выгодных предложений</a><a class="footer__navlink" href="#work">Как мы работаем</a><a class="footer__navlink" href="#offers">Горящие предложения</a><a class="footer__navlink" href="#testimonials">Отзывы</a><a class="footer__navlink" href="#team">Наши эксперты</a></nav>
+          </div>
+          <div class="footer__col footer__col-5">
+            <!--.footer__social
+            a(href="#").footer__social-link
+                +icon('fb')
+            a(href="#").footer__social-link
+                +icon('insta')
+            a(href="#").footer__social-link
+                +icon('yt')
+            -->
+            <div class="footer__payments">
+              <picture>
+                <source data-srcset="img/footer-payments.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 146 37&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;146&quot; height=&quot;37&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/footer-payments.png" alt="image" width="146" height="37">
+              </picture>
+            </div><a class="footer__developers" href="https://webelement.ru/">Разработка сайта WEBELEMENT</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__warning">
+        <div class="footer__warning-inner">Имеются противопоказания. Необходима консультация специалиста.</div>
+      </div>
+    </footer>
+    <div class="mobile-menu">
+      <div class="mobile-menu__close-cross js-close-mobile-menu">
+        <svg class="icon icon-close">
+          <use xlink:href="sprite.svg#close"></use>
+        </svg>
+      </div><a class="mobile-menu__logo" href="/">
+        <picture>
+          <source data-srcset="img/logo.webp" type="image/webp"><img class="lazyload" src="data:image/svg+xml,%3Csvg viewBox=&quot;0 0 162 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Crect width=&quot;162&quot; height=&quot;50&quot; fill=&quot;%23f1f1f1&quot;/%3E%3C/svg%3E" data-src="img/logo.png" alt="image" width="162" height="50">
+        </picture></a>
+      <nav class="mobile-menu__nav"><a class="mobile-menu__navlink" href="#">Поиск выгодных предложений</a><a class="mobile-menu__navlink" href="#">Как мы работаем</a><a class="mobile-menu__navlink" href="#">Акции</a><a class="mobile-menu__navlink" href="#">Отзывы</a><a class="mobile-menu__navlink" href="#">Наши эксперты</a></nav>
+    </div>
+    <div class="modals">
+      <form class="modal__callback-form">
+        <div class="modal modal--callback" id="modal-callback">
+          <div class="modal__close-cross js-close-modal">
+            <svg class="icon icon-close">
+              <use xlink:href="sprite.svg#close"></use>
+            </svg>
+          </div>
+          <div class="modal__title">Заявка на поиск предложений отдыха</div>
+          <div class="modal__text">Рыбные тексты также применяются для демонстрации различных видов</div>
+          <div class="modal__inputs-wrapper">
+            <div class="form-group form-group--custom form-group--name">
+              <label for="callback-modal-name">Ваше имя</label>
+              <input class="custom-input js-input" type="text" name="callback-name" id="callback-modal-name">
+              <div class="error-message">Это поле обязательно для заполнения</div>
+            </div>
+            <div class="form-group form-group--custom form-group--phone">
+              <label for="callback-modal-phone">+ 7 900 000 00 00</label>
+              <input class="custom-input js-input" type="tel" name="callback-phone" id="callback-modal-phone">
+              <div class="error-message">Это поле обязательно для заполнения</div>
+            </div>
+            <button class="callback-form__submit-btn btn" type="submit" id="callback-submit">Отправить</button><div class="form-group form-group__allow">
+<input type="checkbox" name="callback-allow" id="callback-modal-allow" required checked>
+<label for="callback-modal-allow">Я даю согласие на обработку моих персональных данных</label>
+</div>
+          </div>
+        </div>
+      </form>
+      <form class="modal__callback-form">
+        <div class="modal modal--callback" id="modal-book">
+          <div class="modal__close-cross js-close-modal">
+            <svg class="icon icon-close">
+              <use xlink:href="sprite.svg#close"></use>
+            </svg>
+          </div>
+          <div class="modal__title">Заявка на бронирование</div>
+          <div class="modal__text">Рыбные тексты также применяются для демонстрации различных видов</div>
+          <div class="modal__inputs-wrapper">
+            <div class="form-group form-group--custom form-group--name">
+              <label for="book-modal-name">Ваше имя</label>
+              <input class="custom-input js-input" type="text" name="callback-name" id="book-modal-name">
+              <div class="error-message">Это поле обязательно для заполнения</div>
+            </div>
+            <div class="form-group form-group--custom form-group--phone">
+              <label for="book-modal-phone">+ 7 900 000 00 00</label>
+              <input class="custom-input js-input" type="tel" name="callback-phone" id="book-modal-phone">
+              <div class="error-message">Это поле обязательно для заполнения</div>
+            </div>
+            <button class="callback-form__submit-btn btn" type="submit" id="book-submit">Отправить</button><div class="form-group form-group__allow">
+<input type="checkbox" name="callback-allow" id="book-modal-allow" required checked>
+<label for="book-modal-allow">Я даю согласие на обработку моих персональных данных</label>
+</div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="up-arrow">
+      <svg class="icon icon-up">
+        <use xlink:href="sprite.svg#up"></use>
+      </svg>
+    </div>
+  <script src="scripts/vendors~main.js"></script><script src="scripts/main.js"></script></body>
+</html>

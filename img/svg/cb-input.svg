@@ -1,0 +1,8 @@
+export default {
+      id: "cb-input-usage",
+      viewBox: "0 0 12 16",
+      url: __webpack_public_path__ + "D:\\frontend\\Projects\\kurortika-makeup\\src\\img\\svg\\cb-input.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

@@ -1,0 +1,8 @@
+export default {
+      id: "choose-hotels-usage",
+      viewBox: "0 0 21 21",
+      url: __webpack_public_path__ + "D:\\frontend\\Projects\\kurortika-makeup\\src\\img\\svg\\choose-hotels.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

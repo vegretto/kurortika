@@ -1,0 +1,8 @@
+export default {
+      id: "work3-usage",
+      viewBox: "0 0 113 111",
+      url: __webpack_public_path__ + "D:\\frontend\\Projects\\kurortika-makeup\\src\\img\\svg\\work3.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

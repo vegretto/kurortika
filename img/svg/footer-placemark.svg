@@ -1,0 +1,8 @@
+export default {
+      id: "footer-placemark-usage",
+      viewBox: "0 0 6 8",
+      url: __webpack_public_path__ + "D:\\frontend\\Projects\\kurortika-makeup\\src\\img\\svg\\footer-placemark.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
